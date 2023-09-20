@@ -1,6 +1,4 @@
 import React from 'react'
-import Display from './Display'
-import ButtonWrapper from './ButtonWrapper'
 //rfce
 
 function MainWrapper({children}) {

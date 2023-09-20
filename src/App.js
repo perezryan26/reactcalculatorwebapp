@@ -122,15 +122,15 @@ const App = () => {
       let num1 = parseFloat(memory.number);
       let num2 = parseFloat(memory.result);
 
-      if(memory.operator == 'x') {
+      if(memory.operator === 'x') {
         num2 = num1 * num2;
-      } else if (memory.operator == '/') {
-        if(num1 == 0 || num2 == 0) {
+      } else if (memory.operator === '/') {
+        if(num1 === 0 || num2 === 0) {
           num2 = 0;
         } else {
           num2 = num2 / num1;
         }
-      } else if (memory.operator == '+') {
+      } else if (memory.operator === '+') {
         num2 = num1 + num2;
         // (-) operation
       } else {
@@ -138,7 +138,7 @@ const App = () => {
       }
 
       console.log(num2);
-      if(num2 % 1 == 0) {
+      if(num2 % 1 === 0) {
         console.log("it isn't a decimal");
       } else {
         console.log("decimal");
@@ -148,7 +148,7 @@ const App = () => {
         ...memory,
         number: 0,
         operator: "",
-        result: (num2 % 1 == 0) ? num2 : formatFloat(num2),
+        result: (num2 % 1 === 0) ? num2 : formatFloat(num2),
       })
     }
   }
